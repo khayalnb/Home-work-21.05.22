@@ -1,0 +1,167 @@
+using System;
+
+namespace HomeWork
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Task 1 :=============================================================================
+            //try
+            //{
+            //    Console.WriteLine("Birinci ededi daxil edin :");
+            //    int firstNumber = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine("Birinci ededi daxil edin :");
+            //    int secondNumber = Convert.ToInt32(Console.ReadLine());
+            //    int sum = 0;
+            //    //Variant 1
+            //    firstNumber++;
+            //    for (int c = firstNumber; c < secondNumber; c++)
+            //    {
+            //        sum += c;
+            //    }
+            //    //Variant 2
+            //    //for (int i = firstNumber + 1; i < secondNumber; i++)
+            //    //{
+            //    //    sum += i;
+            //    //}
+            //    Console.WriteLine("{0} ile {1} arsindaki edelerin cemi {2} beraberir", firstNumber, secondNumber, sum);
+            //}
+            //catch (Exception)
+            //{
+            //    Console.WriteLine("Reqemden başqa deyer daxil edilmə bilməz !");
+            //}
+            
+
+
+
+            // Task 2:==============================================================================
+            //Console.WriteLine("Birinci ededi daxil edin :");
+            //int val1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Birinci ededi daxil edin :");
+            //int val2 = Convert.ToInt32(Console.ReadLine());
+            //int allNumberSum = 0;
+            //int numberCount = 0;
+            //int average = 0;
+            //val1++;
+            //for (int j = val1; j < val2; j++)
+            //{
+            //    numberCount++;
+            //    allNumberSum += j;
+            //    average = allNumberSum / numberCount;
+            //}
+            //Console.WriteLine("{0} ile {1} arsindaki edelerin ortalmasi: {2} ", val1, val2, average);
+
+
+
+            //Task 3 :==============================================================================
+            try
+            {
+                bool isContinue = true;
+                int wrongAnswerCouunt = 0;
+                do
+                {
+                    Console.WriteLine("Yasinizi daxil  edin :");
+                    int userAge = Convert.ToInt32(Console.ReadLine());
+                    if (userAge > 18)
+                    {
+                        isContinue = true;
+                        Console.WriteLine("Ingilis dili balinizi daxil  edin :");
+                        int userPoint = Convert.ToInt32(Console.ReadLine());
+                        if (userPoint > 50)
+                        {
+                            Console.WriteLine("Tebrikler siz qeydiyyati ugurla basa catdirdiniz !");
+                            Console.WriteLine("=================================");
+                            Console.WriteLine("Basqa telebe varmi ? he/yox");
+                            string areYouStudent = Console.ReadLine().ToLower();
+                            if (areYouStudent.ToLower() == "he")
+                            {
+                                isContinue = true;
+                            }
+                            else if (areYouStudent.ToLower() == "yox")
+                            {
+                                isContinue = false;
+                            }
+                            else
+                            {
+
+                                Console.WriteLine("Duzgun cavab verilmediyine gore sistemden cixis edildi");
+                                isContinue = false;
+                            }
+                        }
+                        else
+                        {
+
+                            Console.WriteLine("Sizin ingilis dili neticeniz 50 uzeri olmadigina gore qeydiyyata davam ede bilmezsiniz !");
+                            Console.WriteLine("=================================");
+                            Console.WriteLine("Basqa telebe varmi ? he/yox");
+                            string areYouStudent = Console.ReadLine().ToLower();
+                            if (areYouStudent.ToLower() == "he")
+                            {
+                                isContinue = true;
+                            }
+                            else if (areYouStudent.ToLower() == "yox")
+                            {
+                                isContinue = false;
+                            }
+                            else
+                            {
+
+                                Console.WriteLine("Duzgun cavab verilmediyine gore sistemden cixis edildi");
+                                isContinue = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+
+                        Console.WriteLine("Sizin yasiniz 18 den asaqi oldugu ucun qeydiyyati davam etdire bilmezsiniz !");
+                        Console.WriteLine("=================================");
+                        Console.WriteLine("Basqa telebe varmi ? he/yox");
+                        string areYouStudent = Console.ReadLine().ToLower();
+                        if (areYouStudent.ToLower() == "he")
+                        {
+                            isContinue = true;
+                        }
+                        else if (areYouStudent.ToLower() == "yox")
+                        {
+                            isContinue = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Duzgun cavab verilmediyine gore sistemden cixis edildi");
+                            isContinue = false;
+                        }
+                    }
+
+                } while (isContinue );
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Daxil edilen deyer tipi yalnisdir"); ;
+            }
+          
+
+
+
+            //// Task 4 :=================================================================
+            //Console.WriteLine("Birinci ededi daxil edin :");
+            //int value1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Birinci ededi daxil edin :");
+            //int value2 = Convert.ToInt32(Console.ReadLine());
+            //int simpleNumberSum = 0;
+            //value1++;
+            //int i = value1;
+            //while (i < value2)
+            //{
+            //    if (i % 2 != 0)
+            //    {
+            //        simpleNumberSum += i;
+            //    }
+            //    i++;
+            //}
+
+        }
+    }
+}

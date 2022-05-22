@@ -1,0 +1,15 @@
+ public static string Division(int a,int b)
+        {
+            try
+            {
+                int result = a / b;
+
+                return result.ToString();
+            }
+            catch (DivideByZeroException)
+            {
+                return $"Division of {b} by zero.";
+                
+            }
+           
+        }

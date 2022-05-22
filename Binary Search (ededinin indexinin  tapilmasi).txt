@@ -1,0 +1,83 @@
+using System;
+
+namespace BinarySearchTask
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = new int[10];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = i;
+
+            }
+
+            Console.WriteLine("Deyer daxil edin:");
+            int custumberValue = int.Parse(Console.ReadLine());
+            bool isValue = false;
+            int index = numbers.Length / 2;
+            do
+            {
+                
+
+                if (numbers[index] == custumberValue)
+                {
+
+                    Console.WriteLine(index - 1);
+                    isValue = true;
+
+                }
+                else
+                {
+                    Console.WriteLine("tapila eded {0} indexi {1}", numbers[index], index - 1);
+                    Console.WriteLine("Yuxari yoxsa asaqi ?  y/a");
+                    string order = Console.ReadLine();
+                    if (order == "y")
+                    {
+
+                        if (custumberValue > numbers[index])
+                        {
+                            index++;
+                            if (numbers[index] == custumberValue)
+                            {
+
+                                Console.WriteLine(index - 1);
+                                isValue = true;
+                                 
+                            }
+                            else
+                            {
+
+                                isValue = false;
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        if (custumberValue < numbers[index])
+                        {
+                            index--;
+                            if (numbers[index] == custumberValue)
+                            {
+
+                                Console.WriteLine(index - 1);
+                            
+                                isValue = true;
+
+                            }
+                            else
+                            {
+                                Console.WriteLine("tapila eded {0} indexi {1}", numbers[index], index - 1);
+                                isValue = false;
+                            }
+                          
+                        }
+                    }
+                }
+            } while (!isValue);
+           
+        }
+    }
+}
